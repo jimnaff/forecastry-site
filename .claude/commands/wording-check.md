@@ -8,7 +8,9 @@ Steps:
    img/link/script/font src pointing off-site.
 2. Read the About and Tools sections and compare each factual claim to the facts
    list in CLAUDE.md. Flag anything not on the list.
-3. Confirm the contact section has only the email and LinkedIn URL.
+3. Confirm the contact section contains only the email, the LinkedIn URL, and the
+   line "North Grafton, Massachusetts". CLAUDE.md is the source of truth: location
+   is "North Grafton, Massachusetts" only, and no rates or booking link.
 
 Output a table: Finding | File:line | Rule broken | Suggested fix. If there are no
 findings, say "Wording check: clean." Do not edit files; report only.

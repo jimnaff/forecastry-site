@@ -49,6 +49,7 @@ Facts about Jim (use these; do not embellish):
 - Prototyping AI-augmented Planning Analytics tools since 2023; 14+ LinkedIn articles.
 - Built a TM1 MCP server, a PAW MCP server, and a VS Code extension for TM1.
   Do NOT name the VS Code extension. Say "a VS Code extension for TM1."
+- Jim has not run a v11-to-v12 migration. Describe v12 work as readiness checks only.
 Never:
 - Say "IBM Business Partner" or "IBM Partner" in any form. "IBM Champion" is fine.
   "Registered with IBM Partner Plus" is NOT to appear either.
