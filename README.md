@@ -18,7 +18,8 @@ Plain HTML and CSS. No JavaScript, no framework, no build step.
 | `images/jim-naff-300.jpg`, `images/jim-naff-600.jpg` | Resized headshots the page uses. Generated. |
 | `images/og.png` | Social preview card (LinkedIn, Slack, etc.). Generated. |
 | `robots.txt`, `sitemap.xml`, `CNAME` | Search engine files and the custom domain name. |
-| `tools/` | Asset script, staging script, wording check. Not published. |
+| `tools/` | Asset script, staging script, wording check, screenshot script. Not published. |
+| `docs/screenshots/` | Phone and desktop screenshots of the page. Generated. Not published. |
 | `.github/workflows/site.yml` | Checks every pull request; deploys on push to `main`. |
 | `CLAUDE.md`, `.claude/` | Instructions for Claude Code, including the `/wording-check` command. |
 
@@ -72,6 +73,12 @@ lychee --config lychee.toml _site/index.html
 
 Run `npm run stage` first. LinkedIn links are skipped because LinkedIn blocks
 link checkers.
+
+## Update the screenshots
+
+Run `npm run screenshots` after `npm ci`. It stages the site and writes
+`docs/screenshots/phone.png` (375px) and `docs/screenshots/desktop.png` (1280px),
+and fails if the page scrolls sideways at either width.
 
 ## How deploys work
 

@@ -12,13 +12,15 @@
     "check:a11y": "start-server-and-test serve http://localhost:8080 pa11y",
     "pa11y": "pa11y-ci --config .pa11yci.json",
     "check:lhci": "lhci autorun",
-    "check": "npm run stage && npm run check:html && npm run check:wording && npm run check:a11y && npm run check:lhci"
+    "check": "npm run stage && npm run check:html && npm run check:wording && npm run check:a11y && npm run check:lhci",
+    "screenshots": "npm run stage && node tools/screenshots.mjs"
   },
   "devDependencies": {
     "@lhci/cli": "^0.16.0",
     "html-validate": "^11.18.0",
     "http-server": "^14.1.1",
     "pa11y-ci": "^5.0.0",
+    "puppeteer": "^25.16.0",
     "start-server-and-test": "^3.0.13"
   }
 }
