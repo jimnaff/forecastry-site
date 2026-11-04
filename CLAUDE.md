@@ -51,8 +51,11 @@ Facts about Jim (use these; do not embellish):
   Do NOT name the VS Code extension. Say "a VS Code extension for TM1."
 - Jim has not run a v11-to-v12 migration. Describe v12 work as readiness checks only.
 Never:
-- Say "IBM Business Partner" or "IBM Partner" in any form. "IBM Champion" is fine.
-  "Registered with IBM Partner Plus" is NOT to appear either.
+- IBM Partner Plus status (as of 2026-11-04): Forecastry Analytics LLC is approved
+  at the "Registered" level. No Business Partner contract (SBPA) is signed yet.
+  The site says NOTHING about Partner Plus until Jim says the SBPA is signed.
+  Never: "IBM Partner", "IBM Business Partner", any tier name (Silver/Gold/Platinum),
+  any badge or logo, or wording implying IBM endorsement. "IBM Champion" stays.
 - Use IBM logos, badges, or trademark imagery. Plain-text product names
   ("IBM Planning Analytics", "TM1", "Planning Analytics Workspace") are fine.
 - Claim Jim's tools are better than, replace, or outperform IBM's.
