@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://forecastryanalytics.com/sitemap.xml
