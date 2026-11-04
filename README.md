@@ -74,6 +74,18 @@ lychee --config lychee.toml _site/index.html
 Run `npm run stage` first. LinkedIn links are skipped because LinkedIn blocks
 link checkers.
 
+## IBM status line
+
+`index.html` has an empty slot for one IBM status line. It is in the About section,
+right after the second paragraph, marked by an `<!-- IBM-STATUS: ... -->` comment.
+Leave it empty until Jim says the line can go live and approves the wording. The
+rules are in CLAUDE.md. Plain text only, no logo.
+
+`tools/wording-check.mjs` currently blocks "Partner Plus" and "IBM Partner", so the
+check will fail once the line is added. Update its `forbidden` list in the same PR
+as the line, changing only what the approved wording needs. The `/wording-check`
+command (`.claude/commands/wording-check.md`) lists the same phrases; update it too.
+
 ## Update the screenshots
 
 Run `npm run screenshots` after `npm ci`. It stages the site and writes
