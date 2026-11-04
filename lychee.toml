@@ -1,0 +1,13 @@
+# lychee link checker config. Run: lychee --config lychee.toml _site/index.html
+
+# Check that in-page links such as #services point at a real id.
+# lychee 0.24+ takes a mode here, not true/false.
+include_fragments = "anchor-only"
+
+exclude = [
+  # LinkedIn answers automated requests with HTTP 999, so it can't be checked.
+  '^https?://([a-z]+\.)?linkedin\.com',
+  # The domain shows a parking page until DNS points at GitHub Pages.
+  # Remove this line after go-live (see README, "Go live on the domain").
+  '^https?://(www\.)?forecastryanalytics\.com',
+]

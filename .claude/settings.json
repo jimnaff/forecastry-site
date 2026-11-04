@@ -1,0 +1,4 @@
+{
+  "permissions": { "defaultMode": "plan" },
+  "showClearContextOnPlanAccept": true
+}

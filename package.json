@@ -1,0 +1,24 @@
+{
+  "name": "forecastry-site",
+  "private": true,
+  "description": "One-page site for Forecastry Analytics LLC. Dev tools only; the site has no runtime dependencies.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "stage": "node tools/stage-site.mjs",
+    "serve": "http-server _site -p 8080 -s -c-1",
+    "check:html": "html-validate _site/index.html",
+    "check:wording": "node tools/wording-check.mjs",
+    "check:a11y": "start-server-and-test serve http://localhost:8080 pa11y",
+    "pa11y": "pa11y-ci --config .pa11yci.json",
+    "check:lhci": "lhci autorun",
+    "check": "npm run stage && npm run check:html && npm run check:wording && npm run check:a11y && npm run check:lhci"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.16.0",
+    "html-validate": "^11.18.0",
+    "http-server": "^14.1.1",
+    "pa11y-ci": "^5.0.0",
+    "start-server-and-test": "^3.0.13"
+  }
+}
