@@ -8,6 +8,7 @@
   --paper: #f7f5f0;
   --ink: #1f2933;
   --muted: #52606d;
+  --muted-on-dark: #aab7c4;
   --rule: #ddd8cc;
   --card: #ffffff;
 
@@ -185,9 +186,19 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Hero */
+/* Hero on navy-deep */
 .hero {
   padding: var(--space-6) 0 var(--space-6);
+  background: var(--navy-deep);
+  color: var(--paper);
+}
+
+.hero h1 {
+  color: var(--paper);
+}
+
+.hero :focus-visible {
+  outline-color: var(--amber);
 }
 
 .hero h1::after {
@@ -202,12 +213,12 @@ a:hover {
 .lead {
   font-size: clamp(1.25rem, 3.2vw, 1.5rem);
   line-height: 1.45;
-  color: var(--ink);
+  color: var(--paper);
   max-width: 34ch;
 }
 
 .platform {
-  color: var(--muted);
+  color: var(--muted-on-dark);
   margin-bottom: var(--space-5);
 }
 
