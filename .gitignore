@@ -2,3 +2,4 @@ node_modules/
 _site/
 .lighthouseci/
 .claude/settings.local.json
+CLAUDE.local.md

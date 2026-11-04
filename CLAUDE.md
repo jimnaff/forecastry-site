@@ -1,10 +1,12 @@
 # CLAUDE.md — Forecastry Analytics website
 
+Private context lives in CLAUDE.local.md (not committed). Read it.
+
 ## Clear instructions
 One-page static marketing site for Forecastry Analytics LLC (FP&A analytics
 consulting; IBM Planning Analytics / TM1 today, other planning platforms later).
-Audience: CFOs, FP&A leaders, IBM partner-program reviewers. Tone: plain, confident,
-no hype. Short sentences. No buzzwords. Done beats perfect.
+Audience: CFOs, FP&A leaders. Tone: plain, confident, no hype. Short sentences.
+No buzzwords. Done beats perfect.
 
 ## Operational process
 - Start every step on a feature branch: feat/<step-slug>.
@@ -14,7 +16,7 @@ no hype. Short sentences. No buzzwords. Done beats perfect.
 - Commit messages: imperative, one line of what and why.
 - End every step with a handback report: what was built, test output, deviations
   from the plan, open questions.
-- Never touch DNS, Namecheap, or email settings. Those are Jim's.
+- Never touch DNS, Namecheap, or email settings.
 
 ## Naming and standards
 - Files: index.html, css/styles.css, images/, tools/, docs/. Lowercase, hyphens.
@@ -49,13 +51,12 @@ Facts about Jim (use these; do not embellish):
 - Prototyping AI-augmented Planning Analytics tools since 2023; 14+ LinkedIn articles.
 - Built a TM1 MCP server, a PAW MCP server, and a VS Code extension for TM1.
   Do NOT name the VS Code extension. Say "a VS Code extension for TM1."
-- Jim has not run a v11-to-v12 migration. Describe v12 work as readiness checks only.
+Rules:
+- Describe v12 work as readiness checks only.
+- The site says nothing about IBM partner programs. Never "IBM Partner",
+  "IBM Business Partner", "Partner Plus", tier names (Silver/Gold/Platinum), badges,
+  logos, or wording that implies IBM endorsement. "IBM Champion" stays.
 Never:
-- IBM Partner Plus status (as of 2026-11-04): Forecastry Analytics LLC is approved
-  at the "Registered" level. No Business Partner contract (SBPA) is signed yet.
-  The site says NOTHING about Partner Plus until Jim says the SBPA is signed.
-  Never: "IBM Partner", "IBM Business Partner", any tier name (Silver/Gold/Platinum),
-  any badge or logo, or wording implying IBM endorsement. "IBM Champion" stays.
 - Use IBM logos, badges, or trademark imagery. Plain-text product names
   ("IBM Planning Analytics", "TM1", "Planning Analytics Workspace") are fine.
 - Claim Jim's tools are better than, replace, or outperform IBM's.
