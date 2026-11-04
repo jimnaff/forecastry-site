@@ -1,0 +1,81 @@
+name: Site
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dev tools
+        run: npm ci
+
+      - name: Stage site into _site/
+        run: npm run stage
+
+      - name: Validate HTML
+        run: npm run check:html
+
+      - name: Check wording rules
+        run: npm run check:wording
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml --verbose --no-progress _site/index.html
+          fail: true
+
+      - name: Check accessibility (pa11y-ci, WCAG2AA)
+        run: npm run check:a11y
+
+      - name: Run Lighthouse CI (mobile)
+        run: npm run check:lhci
+
+      - name: Keep Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci
+          if-no-files-found: ignore
+
+      - name: Set up Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: check
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
