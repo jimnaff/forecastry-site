@@ -76,15 +76,11 @@ link checkers.
 
 ## IBM status line
 
-`index.html` has an empty slot for one IBM status line. It is in the About section,
-right after the second paragraph, marked by an `<!-- IBM-STATUS: ... -->` comment.
-Leave it empty until Jim says the line can go live and approves the wording. The
-rules are in CLAUDE.md. Plain text only, no logo.
+The slot is the `<!-- IBM-STATUS: ... -->` comment in `index.html`, right after the
+second paragraph of the About section.
 
-`tools/wording-check.mjs` currently blocks "Partner Plus" and "IBM Partner", so the
-check will fail once the line is added. Update its `forbidden` list in the same PR
-as the line, changing only what the approved wording needs. The `/wording-check`
-command (`.claude/commands/wording-check.md`) lists the same phrases; update it too.
+Any PR that adds a status line must also update `tools/wording-check.mjs` and the
+`/wording-check` command (`.claude/commands/wording-check.md`) in the same PR.
 
 ## Update the screenshots
 
